@@ -7,7 +7,6 @@
 #define VENDOR 6
 #define SPEAKER 7
 #define CFP 8
-#define UBER 9
 
 const unsigned short crctable[256] =
 {
