@@ -1,5 +1,4 @@
 // Badge types:
-
 #define HUMAN 1
 #define CONTEST 2
 #define GOON 3
@@ -46,7 +45,7 @@ const unsigned short crctable[256] =
  0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0
 };
 
-unsigned short int CalculateCRC16( uint16_t crc, void *c_ptr, size_t len)
+unsigned short int CalculateCRC16(uint16_t crc, void *c_ptr, size_t len)
 {
     unsigned char *c = c_ptr;
 
@@ -136,4 +135,3 @@ void loop()
   brute_badges(9,1);
   done_light();
 }
-
