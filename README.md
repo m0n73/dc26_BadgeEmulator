@@ -4,7 +4,7 @@ This code has been tested on an Arduino Uno and Nano (we used the latter to crea
 the OG badge emulator). 
 
 The communication between the badges is a stripped down and modified version of 
-@wireengineer's [Badge Bus protocol](https://github.com/Wireb/badge_bus/wiki).
+wireengineer's [Badge Bus protocol](https://github.com/Wireb/badge_bus/wiki).
 
 ### Header structure.
 
@@ -15,21 +15,25 @@ Packet Start | 2
 Packet Type | 1
 Payload Len | 1
 Payload | Varies
-CRC16 | 1
+CRC16 | 2
 
 The communication begins with two `0x55 (0b1010101)` bytes -- a preamble
 which is used for baud rate detection (if supported). The following two
 bytes `0x4242` indicate the start of the packet.
 
 The badge only uses two statuses:
-    `0x80 (0b10000000)` -- Checksum is valid. Request.
-    `0xC0 (0b11000000)` -- Checksum is valid. Response.
+
+   * `0x80 (0b10000000)` -- Checksum is valid; Request. This packet will carry
+     no payload.
+
+   * `0xC0 (0b11000000)` -- Checksum is valid; Response. This packet carries a
+     payload identifying the originator.
 
 The command field is always `0xAF` and has no important purpose. This field is 
 left pretty flexible by the specification, see the wiki page for more info.
 
 The header ends with a byte long length of the payload. This badge only has two
-types of payload, and so this field will be 0x00 for the Requests and 0x05 for
+types of payload, so this field will be 0x00 for the requests and 0x05 for
 the Responses.
 
 ### Payload Structure
@@ -51,8 +55,11 @@ Vendor | 6
 Speaker | 7
 CFP | 8
 
-Only two badge states were captured over the wire -- 0x00 for neutral/red and
-0x01 for happy/green.
+Only two badge states were captured over the wire:
+  * `0x00` -- neutral/red.
+  * `0x01` -- happy/green.
 
 The packet ends with two bytes -- CRC16 checksum of the packet (starting from
-the 0x42 byte).
+the `0x42` byte).
+
+P.S. The arduino schematic and instructions are coming tomorrow -- promise!
