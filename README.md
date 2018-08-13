@@ -33,15 +33,15 @@ The DC26 badge protocol only uses two statuses:
 The command field is always `0xAF` and has no apparent purpose. This field is 
 left pretty flexible by the specification, see the wiki page for more info.
 
-The header ends with a byte long length of the payload. This badge only has two
-types of payload, so this field will be `0x00` for the requests and `0x05` for
-the responses.
+The header ends with a byte long length of the payload. As noted above only one
+of the two packet types (statuses) carries a payload. The payload is always five bytes so 
+this field will be `0x00` for the requests and `0x05` for the responses.
 
 ### Payload Structure
 
-Only the responses carry a payload. It's always 5 bytes long. The first three
-bytes are 0x000100. It is unclear to me at the moment what these bytes really do, 
-we weren't able to capture any traffic where these bytes differed.
+The first three bytes of the payload are 0x000100. It is unclear to me at the 
+moment what these bytes really do, we weren't able to capture any traffic where 
+these bytes differed.
 
 The next two bytes represent the badge type and the badge state.
 
