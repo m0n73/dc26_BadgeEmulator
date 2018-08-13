@@ -6,7 +6,7 @@ the OG badge emulator).
 The communication between the badges is a stripped down and modified version of 
 wireengineer's [Badge Bus protocol](https://github.com/Wireb/badge_bus/wiki).
 
-### Header structure.
+### Header structure
 
 Section  | Size in bytes
 :---: | :---:
