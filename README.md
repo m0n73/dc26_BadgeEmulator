@@ -9,6 +9,7 @@ The communication between the badges is a stripped down and modified version of
 ### Header structure.
 
 Section  | Size in bytes
+:---: | :---:
 Preamble | 2
 Packet Start | 2
 Packet Type | 1
@@ -40,6 +41,7 @@ we weren't able to capture any traffic where these bytes differed.
 The next two bytes represent the badge type and the badge state.
 
 Badge Type | Value
+:---: | :---:
 Human | 1
 Contest | 2
 Goon | 3
