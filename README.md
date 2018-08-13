@@ -39,7 +39,7 @@ this field will be `0x00` for the requests and `0x05` for the responses.
 
 ### Payload Structure
 
-The first three bytes of the payload are 0x000100. It is unclear to me at the 
+The first three bytes of the payload are `0x000100`. It is unclear to me at the 
 moment what these bytes really do, we weren't able to capture any traffic where 
 these bytes differed.
 
