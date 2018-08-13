@@ -12,7 +12,8 @@ Section  | Size in bytes
 :---: | :---:
 Preamble | 2
 Packet Start | 2
-Packet Type | 1
+Status | 1
+Command | 1
 Payload Len | 1
 Payload | Varies
 CRC16 | 2
@@ -21,7 +22,7 @@ The communication begins with two `0x55 (0b1010101)` bytes -- a preamble
 which is used for baud rate detection (if supported). The following two
 bytes `0x4242` indicate the start of the packet.
 
-The badge only uses two statuses:
+The DC26 badge protocol only uses two statuses:
 
    * `0x80 (0b10000000)` -- Checksum is valid; Request. This packet will carry
      no payload.
