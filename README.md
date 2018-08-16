@@ -1,8 +1,5 @@
 # DC26 Badge Emulator
 ---
-This code has been tested on an Arduino Uno and Nano (we used the latter to create
-the OG defcon 26 badge emulator). 
-
 The badges use a stripped down version of wireengineer's 
 [Badge Bus protocol](https://github.com/Wireb/badge_bus/wiki).
 
