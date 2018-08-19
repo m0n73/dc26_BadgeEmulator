@@ -60,4 +60,11 @@ Only two badge states were captured over the wire:
 The packet ends with two bytes -- CRC16 checksum of the packet (starting from
 the `0x42` byte).
 
-P.S. The arduino schematic and instructions are coming tomorrow -- promise!
+### Using Arduino
+
+We use the `D3` pin for the end of cycle LED, but this is just preference. The only 
+thing you need to connect is the `Tx` pin of the Arduino to the `Rx` pin of your badge. 
+Your defcon badge runs on 3.3V. If you're using Arduino Nano or Uno (or anytother 5V
+board) for this project, you will have to build a voltage divider for the output pin (`Tx`).
+
+Further instructions (with the voltage divider) coming soon!
