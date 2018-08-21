@@ -67,4 +67,4 @@ thing you need to connect is the `Tx` pin of the Arduino to the `Rx` pin of your
 Your defcon badge runs on 3.3V. If you're using Arduino Nano or Uno (or any other 5V
 board) for this project, you will have to build a voltage divider for the output pin (`Tx`).
 
-Further instructions (with the voltage divider) coming soon!
+![schematic](img/schem.png)
