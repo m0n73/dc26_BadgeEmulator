@@ -62,7 +62,7 @@ the `0x42` byte).
 
 ### Using Arduino
 
-We use the `D3` pin for the end of cycle LED, but this is just preference. The only 
+We use the `D10` pin for the end of cycle LED, but this is just preference. The only 
 thing you need to connect is the `Tx` pin of the Arduino to the `Rx` pin of your badge. 
 Your defcon badge runs on 3.3V. If you're using Arduino Nano or Uno (or any other 5V
 board) for this project, you will have to build a voltage divider for the output pin (`Tx`).
