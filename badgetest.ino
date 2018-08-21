@@ -8,6 +8,7 @@
 #define SPEAKER 7
 #define CFP 8
 
+#define ENDCYCLE 10
 const unsigned short crctable[256] =
 {
  0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7,
@@ -111,13 +112,13 @@ void done_light()
 {
   for (int i = 0; i < 10; i++)
   {
-  digitalWrite(3, HIGH);
+  digitalWrite(ENDCYCLE, HIGH);
   delay(50);
-  digitalWrite(3, LOW);
+  digitalWrite(ENDCYCLE, LOW);
   delay(50);
-  digitalWrite(3, HIGH);
+  digitalWrite(ENDCYCLE, HIGH);
   delay(50);
-  digitalWrite(3, LOW);
+  digitalWrite(ENDCYCLE, LOW);
   delay(50);
   }
 }
@@ -125,7 +126,7 @@ void done_light()
 void setup()
 {
   Serial.begin(9600);
-  pinMode(3, OUTPUT);
+  pinMode(ENDCYCLE, OUTPUT);
 }
 
 void loop()
