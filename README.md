@@ -42,16 +42,16 @@ these bytes differed.
 
 The next two bytes represent the badge type and the badge state.
 
-Badge Type | Value
+Badge Type | Byte
 :---: | :---:
-Human | 1
-Contest | 2
-Goon | 3
-Artist | 4
-Press | 5
-Vendor | 6
-Speaker | 7
-CFP | 8
+Human | `0x01`
+Contest | `0x02`
+Goon | `0x03`
+Artist | `0x04`
+Press | `0x05`
+Vendor | `0x06`
+Speaker | `0x07`
+CFP | `0x08`
 
 Only two badge states were captured over the wire:
   * `0x00` -- neutral/red.
